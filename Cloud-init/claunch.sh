@@ -185,7 +185,7 @@ cleanup (){
     #password
     rm -f /root/.litespeed_password
     rm -f /root/.bash_history
-    if [ "${PROVIDER}" = 'aws' ]; then
+    if [ "${PROVIDER}" = 'aws' ] || [ "${PROVIDER}" = 'undefined' ] ; then
         sudo passwd -d root >/dev/null 2>&1
         sudo sed -i 's/root::/root:*:/g' /etc/shadow >/dev/null 2>&1
         if [ -d /home/ubuntu ]; then
