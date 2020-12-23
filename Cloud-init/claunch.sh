@@ -126,11 +126,11 @@ cleanup (){
         mv /etc/legal /etc/legal.bk
     fi
     #cloud-init here
-    rm -f /var/log/cloud-init.log
-    rm -f /var/log/cloud-init-output.log
-    rm -rf /var/lib/cloud/data
-    rm -rf /var/lib/cloud/instance
-    rm -rf /var/lib/cloud/instances/*
+    #rm -f /var/log/cloud-init.log
+    #rm -f /var/log/cloud-init-output.log
+    #rm -rf /var/lib/cloud/data
+    #rm -rf /var/lib/cloud/instance
+    #rm -rf /var/lib/cloud/instances/*
     #system log
     rm -rf /var/log/unattended-upgrades
     rm -f /var/log/apt/history.log*
@@ -212,7 +212,7 @@ main_claunch(){
     check_root
     #uninstall_aegis
     set_ssh_alive
-    install_cloudinit
+    #install_cloudinit
     setup_cloud
     cleanup
 }
