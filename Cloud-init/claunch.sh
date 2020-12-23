@@ -208,7 +208,7 @@ cleanup (){
 }
 
 warren(){
-    apt install qemu-guest-agent -y
+    apt install qemu-guest-agent -y >/dev/null 2>&1
     echo -e "datasource:\n  Ec2:\n    metadata_urls: [ '169.254.169.254' ]\n    strict_id: false" > /etc/cloud/cloud.cfg.d/00-ec2.cfg
 }
 
