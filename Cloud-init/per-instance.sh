@@ -205,7 +205,7 @@ setup_domain(){
 }    
 setup_banner(){
     if [ ! -e ${BANNERDST} ]; then
-        STATUS="$(curl -s https://raw.githubusercontent.com/litespeedtech/ls-cloud-image/master/Banner/${BANNERNAME} \
+        STATUS="$(curl -s https://raw.githubusercontent.com/herukrayz/ls-cloud-image/master/Banner/${BANNERNAME} \
         -o ${BANNERDST} -w "%{http_code}")"  
         if [ ${?} != 0 ] || [ "${STATUS}" != '200' ]; then
             curl -s https://cloud.litespeed.sh/Banner/${BANNERNAME} -o ${BANNERDST}
